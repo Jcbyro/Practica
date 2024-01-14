@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello!</title>
+                                                            <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+                                                        <!--Responsive design-->
+    <style>
+        @media (min-width: 600px) {
+            body {
+                background-color: green;
+            }
+        }
+        @media (max-width: 599px) {
+            body {
+                background-color: grey;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Hello, world!</h1>
+    <h2 style="color: red; text-align: right;">I said <strong>Hello</strong>, <i>world!</i></h2>
+
+                                                            <!--CSS-->
+    <style>
+        a[href="https://ar.pinterest.com"]{
+            color: red;
+        }
+    </style>
+
+    <style>
+        li {
+            background-color: yellow;
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        li:hover {
+            background-color: black;
+        }
+    </style>
+
+    <ul>
+        <li><a href="https://www.google.com">Google</a></li>
+        <li><a href="https://ar.pinterest.com">Pinterest</a></li>
+        <li><a href="https://www.youtube.com">Youtube</a></li>
+    </ul>
+    <ol>
+        <li><a href="https://www.google.com">Google</a></li>
+        <li><a href="https://ar.pinterest.com">Pinterest</a></li>
+        <li><a href="https://www.youtube.com">Youtube</a></li>
+    </ol>
+
+    <h1>Mario and Luigi:</h1>
+    <img style="width: 400px; height: 350px;" src="C:\Users\Usuario\OneDrive\Pictures\Extra\3.jpg" alt="3">
+
+    <br/> <br/>
+
+    <table>
+        <link rel="stylesheet" href="Estilos.css">
+        <thead>
+            <th></th>
+            <th>Lucas</th>
+            <th>Fede</th>
+            <th>Juan</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Peso</td>
+                <td>100 kg</td>
+                <td>40 kg</td>
+                <td>70 kg</td>
+            </tr>
+        </tbody>
+    </table>
+                                                            <!--Forms-->
+    <form>
+        <div>
+            Cual fue el ultimo digito del año de la de mordida causada por Mangle en FNAF?
+            <input name="number" type="radio" value="1"> 1
+            <input name="number" type="radio" value="8"> 8
+            <input name="number" type="radio" value="9"> 9
+            <input name="number" type="radio" value="7"> 7
+        </div>
+        <input type="Submit">
+    </form>
+
+    <form>
+        <div p>
+            Cuanto es 2 + 2?
+            <input name="number" type="radio" value="2"> 2
+            <input name="number" type="radio" value="6"> 6
+            <input name="number" type="radio" value="4"> 4
+            <input name="number" type="radio" value="75"> 75
+        </div p>
+        <input type="Submit">
+    </form>
+
+    <div id="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>I</div>
+        <div>J</div>
+        <div>K</div>
+        <div>L</div>
+    </div>
+
+    <div class="grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                This is a section.
+            </div>
+            <div class="col-4">
+                This is another section. <!-- col-4 significa que un elemento ocupa 4 columnas-->
+            </div>
+            <div class="col-4">
+                This is a third section.
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                This is a section. <!-- col-3 significa que un elemento ocupa 3 columnas-->
+            </div>
+            <div class="col-6">
+                This is another section. <!-- col-6 significa que un elemento ocupa 6 columnas-->
+            </div>
+            <div class="col-3">
+                This is a third section.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6"> <!-- col-lg-3 significa que un elemento ocupa 3 columnas en una pantalla grande -->
+                This is a section.
+            </div>
+            <div class="col-lg-3 col-sm-6"> <!-- col-sm-6 significa que un elemento ocupa 6 columnas en una pantalla pequeña -->
+                This is another section.
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                This is a third section.
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                This is a fourth section.
+            </div>
+        </div>
+    </div>
+</body>
+<html>

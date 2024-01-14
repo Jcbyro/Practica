@@ -1,0 +1,62 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    font-size: 25px;
+    color: goldenrod;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+div {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+    text-align: center;
+    background-color: black;
+}
+
+#container {
+    display: flex;  /*Le agregra un espacio horizontal a cada columna para que no este todo en una pila*/
+    flex-wrap: wrap; /*Le agregra un espacio vertical a cada columna para que no este todo en una fila*/
+}
+
+#container > div {
+    background-color: aqua;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+}
+
+.grid {
+    background-color: green;
+    display: grid;
+    padding: 20px;
+    grid-column-gap: 20px; /*La distancia horizontal entre las columnas*/
+    grid-row-gap: 10px; /*La distancia vertical entre las columnas*/
+    grid-template-columns: 200px 200px auto;
+}
+
+.grid-item {
+    background-color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.row > div {
+    padding: 20px;
+    background-color: teal;
+    border: 2px solid black;
+}
+
+div[p] {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    margin: 10px;
+}
