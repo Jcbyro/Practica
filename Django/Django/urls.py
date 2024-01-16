@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hola/', include("hola.urls"))
                 #include("APP_NAME.urls")
+        #(hola/) especifica que al poner /hola al URL, me lleva a la nueva aplicacion
 ]
