@@ -20,7 +20,7 @@ else:
 Name = "Harry"
 print(Name[0]) #Primera letra
 print(Name[1]) #Segunda letra
-print(Name[2]) #Tercera letra
+print(Name[2]) #Tercera letra+
 print(Name[3]) #Cuarta letra
 print(Name[4]) #Quinta letra
 #Tambien se puede escribir como
