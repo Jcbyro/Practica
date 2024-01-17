@@ -21,7 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Practica/', include('Hola.urls')),
+    path('Practica/', include('Practica.urls')),
                     #include('APP_NAME.urls'),
         #(Practica/) especifica que al poner /Practica al URL, me lleva a la nueva aplicacion
 ]
