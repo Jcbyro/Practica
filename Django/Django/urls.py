@@ -21,7 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hola/', include("hola.urls"))
-                #include("APP_NAME.urls")
-        #(hola/) especifica que al poner /hola al URL, me lleva a la nueva aplicacion
+    path('Practica/', include('Hola.urls')),
+                    #include('APP_NAME.urls'),
+        #(Practica/) especifica que al poner /Practica al URL, me lleva a la nueva aplicacion
 ]
