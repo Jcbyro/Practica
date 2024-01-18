@@ -5,3 +5,4 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Hola, Mundo")
+                        #"Hola, Mundo" es lo que imprime al ponerle /Practica despues del URL
