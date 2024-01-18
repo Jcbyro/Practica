@@ -6,3 +6,8 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Hola, Mundo")
                         #"Hola, Mundo" es lo que imprime al ponerle /Practica despues del URL
+def brian(request):
+    return HttpResponse("Hola, Brian")
+
+def david(request):
+    return HttpResponse("Hola, David")
