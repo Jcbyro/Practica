@@ -18,7 +18,7 @@ def index(request):
 
 #def greet(request, name):
     return HttpResponse(f"Hola, {name.capitalize()}")
-                                #.capitalize() hace que la primera palabra ahora este en mayuscula
+                                    #.capitalize() hace que la primera palabra ahora este en mayuscula
 
 def greet(request, name):
     return render(request, "Practica/greet.html", {
