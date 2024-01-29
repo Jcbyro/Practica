@@ -8,3 +8,5 @@ def index(request):
     return render(request, 'Newyear/index.html', {
         'Newyear': now.month == 1 and now.day == 1
     })
+        # Puedo remplazar 'Newyear": ... por 'Newyear': True
+                                            # Esta nueva funcion hace que al salir un resultado me de lo opuesto, es decir si es Newyear entonces dice NO

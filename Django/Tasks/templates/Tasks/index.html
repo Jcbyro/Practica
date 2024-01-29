@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tasks</title>
+    </head>
+    <body>
+        <ul>
+            {% for Task in Tasks %}
+                <li>{{ Task }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+
+<!-- ["foo", "bar", "baz"] are all Task -->

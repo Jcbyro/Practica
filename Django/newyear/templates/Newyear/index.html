@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
         <title>Is it New Year's?</title>
     </head>
     <body>
+        <link rel="stylesheet" href="{% static 'newyear/styles.css' %}">
         {% if Newyear %}
             <h1>YES</h1>
         {% else %}
@@ -11,3 +13,6 @@
         {% endif %}
     </body>
 </html>
+
+<!-- La pagina web agarra este Html y si es YES o NO, entonces crea en secreto otro Html 
+donde todo esta igual excepto que la respuesta que no es correcta desaparece y te muestra ese nuevo Html -->
