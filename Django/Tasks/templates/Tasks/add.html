@@ -1,0 +1,40 @@
+{% extends "Tasks/layout.html" %}
+<!-- 1 Version
+    <h1>Add Task:</h1>
+    <form action="">
+        <input type="text" name="Task">
+        <input type="submit">
+    </form>
+-->
+
+    <!-- Ahora con layout.html incluido -->
+    {% block body %}
+<!-- 2 Version
+        <h1>Add Task:</h1>
+        <form action="{% url 'Tasks:add' %}" method="post">
+            <input type="text" name="Task">
+            <input type="submit">
+        </form>
+        <a href="{% url 'Tasks:index' %}">View Tasks</a>
+--> 
+<!-- 3 Version 
+        <h1>Add Task:</h1>
+        <form action="{% url 'Tasks:add' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="task">
+            <input type="submit">
+        </form>
+        <a href="{% url 'Tasks:index' %}">View Tasks</a>
+-->
+
+<!-- 4 Version --> 
+        <h1>Add Task:</h1>
+        <form action="{% url 'Tasks:add' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <!-- {{ form }} Es lo mismo que poner <input type="text" name="task"> -->
+            <input type="submit">
+        </form>
+        <a href="{% url 'Tasks:index' %}">View Tasks</a>
+                    <!-- El Tasks viene del app_name -->
+    {% endblock %}

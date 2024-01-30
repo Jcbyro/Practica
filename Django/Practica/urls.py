@@ -5,6 +5,7 @@ from django.urls import path
 from . import views
 # Importa cualquier funcion que se creo en views.py
 
+app_name = "Practica"
 urlpatterns = [
     path('', views.index, name='index'),
     # ("") un string que representa el URL
