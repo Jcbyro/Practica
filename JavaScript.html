@@ -1,0 +1,176 @@
+<!-- 1 Version
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello</title>
+        <script>
+            alert('Hello, world!');
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+    </body>
+</html>
+-->
+
+<!-- 2 Version 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello</title>
+        <script>
+            function hello() {
+                alert('Hello, world!')
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <button onclick="hello()">Click Here</button>
+Esta funcion crea un boton en la pagina que me lleva a lo que esta dentro de script 
+    </body>
+</html>
+-->
+
+<!-- Informacion 
+var age = 20;  #var: se usa para definir una variable globalmente
+let counter = 1; #let: se usa para definir una variable que este limitado a un bloque actual, como una funcion o un bucle
+const PI = 3,14; #const: es usa para definir una variable que no se podra cambiar
+-->
+
+<!-- 3 Version 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            let counter = 0;
+            function count() {
+                counter++;
+                alert(counter);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
+Esta version crea un boton que al darle click te dice un numero que se va incrementando por 1 cada vez que se da click
+-->
+
+<!-- 4 Version 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            function hello() {
+                const header = document.querySelector('h1');
+                if (header.innerHTML === 'Hello!') {
+"==="" sirve como una comparacion mas fuerte entre 2 items, tambien chechea que los objetos sean del mismo tipo
+                    header.innerHTML = 'Goodbye!';
+                }
+                else {
+                    header.innerHTML = 'Hello!';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <button onclick="hello()">Click Here</button>
+    </body>
+</html>
+-->
+
+<!-- 5 Version 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            let counter = 0;
+            function count() {
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+                
+                if (counter % 10 === 0) {
+                    alert(`Count is now ${counter}`)
+                }
+            }
+        </script>
+El if de arriba sirve para que cada vez que el contador llegue a un multiplo de 10, me avise
+    </head>
+    <body>
+        <h1>0</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
+Esta version hace lo mismo que la version 3 solo que en vez de que te diga un numero cada ves que clickeas, esta vez se va sumando 1 al 0 que esta en cima del boton
+-->
+
+<!-- 6 Version
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            let counter = 0;
+            function count() {
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+                
+                if (counter % 10 === 0) {
+                    alert(`Count is now ${counter}`)
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('button').onclick = count;
+            });
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
+-->
+
+<!-- 7 Version 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script src="Java Index.js"></script>
+Lo que esta dentro de este script trae informacion de Java Index.js
+    </head>
+    <body>
+        <h1>0</h1>
+        <button>Count</button>
+    </body>
+</html>
+-->
+
+<!-- 8 Version -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = function() {
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello, ${name}`);
+                };
+            });
+        </script>
+<!-- Por alguna razon hay que usar ` ` para alert (se encuentra arriba del tab) -->
+    </head>
+    <body>
+        <form>
+            <input autofocus id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
+    </body>
+</html>
