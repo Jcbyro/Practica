@@ -13,7 +13,7 @@
 </html>
 -->
 
-<!-- 2 Version 
+<!-- 2 Version: Events 
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,18 +27,17 @@
     <body>
         <h1>Hello!</h1>
         <button onclick="hello()">Click Here</button>
-Esta funcion crea un boton en la pagina que me lleva a lo que esta dentro de script 
     </body>
 </html>
 -->
 
-<!-- Informacion 
+<!-- Informacion
 var age = 20;  #var: se usa para definir una variable globalmente
 let counter = 1; #let: se usa para definir una variable que este limitado a un bloque actual, como una funcion o un bucle
 const PI = 3,14; #const: es usa para definir una variable que no se podra cambiar
 -->
 
-<!-- 3 Version 
+<!-- 3 Version: Variables 
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -56,10 +55,9 @@ const PI = 3,14; #const: es usa para definir una variable que no se podra cambia
         <button onclick="count()">Count</button>
     </body>
 </html>
-Esta version crea un boton que al darle click te dice un numero que se va incrementando por 1 cada vez que se da click
 -->
 
-<!-- 4 Version 
+<!-- 4 Version: querySelector
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -68,7 +66,7 @@ Esta version crea un boton que al darle click te dice un numero que se va increm
             function hello() {
                 const header = document.querySelector('h1');
                 if (header.innerHTML === 'Hello!') {
-"==="" sirve como una comparacion mas fuerte entre 2 items, tambien chechea que los objetos sean del mismo tipo
+"===" sirve como una comparacion mas fuerte entre 2 items, tambien chechea que los objetos sean del mismo tipo
                     header.innerHTML = 'Goodbye!';
                 }
                 else {
@@ -84,7 +82,7 @@ Esta version crea un boton que al darle click te dice un numero que se va increm
 </html>
 -->
 
-<!-- 5 Version 
+<!-- 5 Version: DOM Manipulation
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -152,7 +150,7 @@ Lo que esta dentro de este script trae informacion de Java Index.js
 </html>
 -->
 
-<!-- 8 Version -->
+<!-- 8 Version
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -165,12 +163,228 @@ Lo que esta dentro de este script trae informacion de Java Index.js
                 };
             });
         </script>
-<!-- Por alguna razon hay que usar ` ` para alert (se encuentra arriba del tab) -->
+Por alguna razon hay que usar ` ` para alert (se encuentra arriba del tab) 
     </head>
     <body>
         <form>
             <input autofocus id="name" placeholder="Name" type="text">
             <input type="submit">
         </form>
+    </body>
+</html>
+-->
+
+<!-- 9 Version
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Colors</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('button').forEach(function(button) {
+                    button.onclick = function() {
+                        document.querySelector("#hello").style.color = button.dataset.color;
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">Hello</h1>
+        <button data-color="red">Red</button>
+        <button data-color="blue">Blue</button>
+        <button data-color="green">Green</button>
+    </body>
+</html>
+-->
+<!-- style.SOMETHING sirve para cambiar el estilo de un elemento
+        data-SOMETHING se usa para asignar un dato a un elemento HTML
+        querySelectorAll sirve para obtener una lista de nodos con todos los elementos (crea una base para cada elemento) 
+        forEach agarra otra funcion y aplica esa funcion en cada elemento de una lista
+-->
+
+<!-- 10 Version: Arrow Functions 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Arrow</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('button').forEach(function(button) {
+                    button.onclick = () => {
+                        document.querySelector("#hello").style.color = button.dataset.color;
+                    }
+                });
+            });
+            count = () => {
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+                
+                if (counter % 10 === 0) {
+                    alert(`Count is now ${counter}`)
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">Hello</h1>
+        <button data-color="red">Red</button>
+        <button data-color="blue">Blue</button>
+        <button data-color="green">Green</button>
+    </body>
+</html>
+-->
+
+<!-- 11 Version 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Colors</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('select').onchange = function() {
+                    document.querySelector('#hello').style.color = this.value;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">Hello</h1>
+        <select>
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </body>
+</html>
+-->
+
+<!-- 12 Version: TODO List 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tasks</title>
+        <script src="Tasks.js"></script>
+    </head>
+    <body>
+        <h1>Tasks</h1>
+        <ul id="tasks"></ul>
+        <form>
+            <input id="task" placeholder = "New Task" type="text">
+            <input id="submit" type="submit">
+        </form>
+    </body>
+</html>
+-->
+
+<!-- 13 Version: Intervals 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            let counter = 0;
+            function count() {
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('button').onclick = count;
+                setInterval(count, 1000);
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('button').onclick = count;
+            });
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
+-->
+
+<!-- 14 Version: Local Storage 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            // Check if there is already a value in local storage
+            if (!localStorage.getItem('counter')) {
+                // If not, set the counter to 0 in local storage
+                localStorage.setItem('counter', 0);
+            }
+            function count() {
+                // Retrieve counter value from local storage
+                let counter = localStorage.getItem('counter');
+                // update counter
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+                // Store counter in local storage
+                localStorage.setItem('counter', counter);
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                // Set heading to the current value inside local storage
+                document.querySelector('h1').innerHTML = localStorage.getItem('counter');
+                document.querySelector('button').onclick = count;
+            });
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
+-->
+<!-- 
+    localStorage.getItem(key): Esta funcion busca por una entrada al local storage usando una llave, y devuelta el valor asociado a la llave
+    localStorage.setItem(key, value): Esta funcion establece una entrada en el almacenamiento local, asociando la clave con un nuevo valor
+-->
+
+<!-- 15 Version: APIs: JavaScript Objects 
+let person = {
+    first: 'Harry',
+    last: 'Potter'
+};
+
+{
+    "origin": {
+        "city": "New York",
+        "code": "JFK"
+    },
+    "destination": {
+        "city": "London",
+        "code": "LHR"
+    };
+    "duration": 415
+}
+-->
+
+<!-- 16 Version: APIs: Currency Exchange 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Currency Exchange</title>
+        <script src="Currency.js"></script>
+    </head>
+    <body></body>
+</html>
+-->
+
+<!-- 17 Version -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Currency Exchange</title>
+        <script src="Currency.js"></script>
+    </head>
+    <body>
+        <form>
+            <input id="currency" placeholder="Currency" type="text">
+            <input type="submit" value="Convert">
+        </form>
+        <div id="result"></div>
     </body>
 </html>
